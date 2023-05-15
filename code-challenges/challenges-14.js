@@ -24,12 +24,13 @@
 //
 
 const LastWord = (str) => {
-    const theindex= str.lastIndexOf(" ")
-    if (theindex != -1){
-     return str.slice(theindex+1)
-    }else {
-      return str
-    }}
+    const theindex = str.lastIndexOf(" ")
+    if (theindex != -1) {
+        return str.slice(theindex + 1)
+    } else {
+        return str
+    }
+}
 // -------------------------------------------------------------------------------------------------------
 
 // -------------------------------------------------------------------------------------------------------
@@ -43,7 +44,7 @@ const LastWord = (str) => {
 
 const LastWord_2 = (str) => {
     const newArray = str.split(" ")
-    const theLastString = newArray[newArray.length-1]
+    const theLastString = newArray[newArray.length - 1]
     return theLastString
     // write your code here
 }
@@ -69,12 +70,33 @@ const LastWord_2 = (str) => {
 
 const replaceWords = (str) => {
 
-    const x = str.replaceAll('I', 'We').replaceAll('am', 'are').replaceAll('was', 'were');        // str.replaceAll('of','are')
 
-       
-     return x
-       
+    const newarr = str.split(" ")
+    const i = newarr.indexOf('I')
+    const am = newarr.indexOf('am')
+    const was = newarr.indexOf('was')
+
+    if (i != -1) {
+        const wechanging = newarr.splice(i, 1, 'We')
     }
+    if (am != -1) {
+        const areChanging = newarr.splice(am, 1, 'are')
+    }
+
+    if (was != -1) {
+        const wereChanging = newarr.splice(was, 1, 'were')
+    }
+
+
+
+
+    console.log(newarr)
+
+    return newarr.join(' ')
+
+}
+       
+    
 // -------------------------------------------------------------------------------------------------------
 
 // -------------------------------------------------------------------------------------------------------
