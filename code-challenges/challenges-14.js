@@ -87,7 +87,7 @@ const replaceWords = (str) => {
         const wereChanging = newarr.splice(was, 1, 'were')
     }
 
-
+//
 
 
     console.log(newarr)
